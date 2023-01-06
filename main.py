@@ -22,7 +22,7 @@ class TikTok:
             self.video_id = input('> TikTok URL: ').split('/')[5]
         except IndexError:
             print(
-                '\nInvalid TikTok URL format.\nFormat expected: https://www.tiktok.com/@username/vi'
+                '\nInvalid TikTok URL format.\nFormat expected: https://www.tiktok.com/@le_grandmechant_loup/vi'
                 'deo/1234567891234567891'
             )
             os.system('title [TikTok Shares Botter] - Restart required')
@@ -33,7 +33,7 @@ class TikTok:
 
     def status(self, code, intention):
         if code == 200:
-            self.added += 1
+            self.added += 2000
         else:
             self.lock.acquire()
             print(f'Error: {intention} | Status Code: {code}')
